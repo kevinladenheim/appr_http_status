@@ -1,0 +1,36 @@
+kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://127.0.0.1
+
+
+Connection Refused
+
+
+
+return value is nil
+
+kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/index/
+
+
+404 Not Found
+
+
+
+returned status: {:available=>true}
+
+kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb https://msp.f-secure.com/web-test/common/test.html
+
+
+200 OK
+
+
+
+returned status: {:available=>true}
+
+kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/
+
+
+200 OK
+
+
+
+returned status: {:available=>true}
+
