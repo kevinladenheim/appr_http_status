@@ -34,3 +34,13 @@ kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/
 
 returned status: {:available=>true}
 
+kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://thisisgarbage
+
+
+Illegal URL
+
+
+
+return value is nil
+
+
