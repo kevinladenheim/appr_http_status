@@ -2,12 +2,12 @@
 
 require_relative "fetcher"
 
-unless ARGV.length == 1
-  print "need url\n\n"
-  exit
-end
+#unless ARGV.length == 1
+#  print "need url\n\n"
+#  exit
+#end
 
-report = Fetchers::HTTP_Status.new(ARGV[0])
+report = Fetchers::HTTPStatus.new(ARGV[0])
 status = report.fetch
 
 if status != nil

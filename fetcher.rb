@@ -2,7 +2,7 @@ require "net/http"
 require "uri"
 
 module Fetchers
-   class HTTP_Status 
+   class HTTPStatus 
 
      TIMEOUT = 30
 
@@ -14,20 +14,17 @@ module Fetchers
        begin
          uri = URI.parse(@url)
          
+         http = Net::HTTP.new(uri.host, uri.port)
+         http.read_timeout = TIMEOUT
+
          if @url[4] == 's'
-           http = Net::HTTP.new(uri.host, uri.port)
            http.use_ssl = true
            # fake cert? no problem!
            http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-         else
-           http = Net::HTTP.new(uri.host, uri.port)
          end
-
-         http.read_timeout = TIMEOUT
          
          response = http.request(Net::HTTP::Get.new(uri.request_uri))
          print "\n\n", response.code, " ", response.message, "\n\n"
-
 
        rescue Timeout::Error
          printf "\n\nTimeout error\n\n"
