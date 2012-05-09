@@ -17,6 +17,7 @@ module Fetchers
          http = Net::HTTP.new(uri.host, uri.port)
          http.read_timeout = TIMEOUT
 
+         # would it be better to check uri.port against 80 and 443?
          if @url[4] == 's'
            http.use_ssl = true
            # fake cert? no problem!
