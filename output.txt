@@ -1,4 +1,4 @@
-kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://127.0.0.1
+kpl@billybob:~/apprentice/http_stat$ ./http_status.rb http://127.0.0.1
 
 
 Connection Refused
@@ -7,7 +7,7 @@ Connection Refused
 
 return value is nil
 
-kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/index/
+kpl@billybob:~/apprentice/http_stat$ ./http_status.rb http://www.cnn.com/index/
 
 
 404 Not Found
@@ -16,7 +16,7 @@ kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/index/
 
 returned status: {:available=>true}
 
-kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb https://msp.f-secure.com/web-test/common/test.html
+kpl@billybob:~/apprentice/http_stat$ ./http_status.rb https://msp.f-secure.com/web-test/common/test.html
 
 
 200 OK
@@ -25,7 +25,7 @@ kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb https://msp.f-secure.com/we
 
 returned status: {:available=>true}
 
-kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/
+kpl@billybob:~/apprentice/http_stat$ ./http_status.rb http://www.cnn.com/
 
 
 200 OK
@@ -34,7 +34,7 @@ kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://www.cnn.com/
 
 returned status: {:available=>true}
 
-kpl@billybob:~/apprentice/http_stat$ ./HTTPStatus.rb http://thisisgarbage
+kpl@billybob:~/apprentice/http_stat$ ./http_status.rb http://thisisgarbage
 
 
 Illegal URL

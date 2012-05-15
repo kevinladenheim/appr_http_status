@@ -3,31 +3,31 @@ Purpose: Try to load a URL to see if a site is alive. Handles http and https.
 
 Usage: 
 
-./HTTPStatus.rb http://127.0.0.1
+./http_status.rb http://127.0.0.1
 
 
 		Connection Refused
 		return value is nil
 
-./HTTPStatus.rb http://www.cnn.com/index/
+./http_status.rb http://www.cnn.com/index/
 
 
 		404 Not Found
 		returned status: {:available=>true}
 
-./HTTPStatus.rb https://msp.f-secure.com/web-test/common/test.html
+./http_status.rb https://msp.f-secure.com/web-test/common/test.html
 
 
 		200 OK
 		returned status: {:available=>true}
 
-./HTTPStatus.rb http://www.cnn.com/
+./http_status.rb http://www.cnn.com/
 
 
 		200 OK
 		returned status: {:available=>true}
 
-./HTTPStatus.rb http://thisisgarbage
+./http_status.rb http://thisisgarbage
 
 
 		Illegal URL
